@@ -1,7 +1,7 @@
-@extends('layouts.template_peternak')
+@extends('layouts.template_pabrik')
 
-@section('title', 'Dashboard Peternak')
-@section('judul_konten','Dashboard Peternak')
+@section('title', 'Dashboard Pabrik')
+@section('judul_konten','Dashboard Pabrik')
 @section('konten')
 <div class="grid grid-cols-4 gap-4">
     {{-- card --}}
