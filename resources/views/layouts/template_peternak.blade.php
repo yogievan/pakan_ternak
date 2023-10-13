@@ -15,6 +15,17 @@
 
     <!-- fontawesome css-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    
+    <!--font poppins-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap" rel="stylesheet">
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 
 
 </head>
@@ -23,8 +34,8 @@
     <!-- Header -->
     <header class="border-b shadow-md dark:bg-gray-800 dark:border-gray-700 p-4 text-white">
         <div class="flex">
-            <a href="#/dashboard/peternak">
-                <div class="flex">
+            <a href="{{ route('dashboard_peternak') }}">
+                <div class="flex gap-2">
                     <img class="w-8 h-10 mr-2 my-auto" src="../assets/img/UKDW.png" alt="logo">
                     <h1 class="text-2xl font-semibold my-auto">
                         Sistem Informasi Pakan Ternak
@@ -32,7 +43,10 @@
                 </div>
             </a>
             <p class="ml-auto mr-5 my-auto font-semibold">
-                <-- USERNAME -->
+                @php
+                    $name = Auth::user()->name
+                @endphp
+                {{ $name }}
             </p>
             <div class="mr-10">
                 <div class="w-[50px]">
@@ -60,17 +74,17 @@
                         </a>
                     </li>
                     <li class="mb-2">
-                        <a href="#/form/order/pakan" class="block p-2 rounded hover:bg-gray-400 hover:text-gray-800">
+                        <a href="{{ route('form_order_pakan') }}" class="block p-2 rounded hover:bg-gray-400 hover:text-gray-800">
                             <i class="fa fa-truck-ramp-box mr-3"></i> Form Order Pakan
                         </a>
                     </li>
                     <li class="mb-2">
-                        <a href="#/data/peternak" class="block p-2 rounded hover:bg-gray-400 hover:text-gray-800">
+                        <a href="{{ route('data_peternak') }}" class="block p-2 rounded hover:bg-gray-400 hover:text-gray-800">
                             <i class="fa fa-database mr-3"></i> Data Peternak
                         </a>
                     </li>
                     <li class="mb-2">
-                        <a href="#/stok/pakan" class="block p-2 rounded hover:bg-gray-400 hover:text-gray-800">
+                        <a href="{{ route('stok_pakan') }}" class="block p-2 rounded hover:bg-gray-400 hover:text-gray-800">
                             <i class="fa fa-boxes-stacked mr-3"></i> Stok Pakan
                         </a>
                     </li>
@@ -83,8 +97,9 @@
         <main class="flex p-4">
             <!-- Your content goes here -->
             <div class="py-3 pl-5 pr-5 font-bold text-gray-800">
-                <p class="text-2xl font-normal my-auto mb-3">
+                <p class="text-[2em] font-bold my-auto mb-3">
                     @yield('judul_konten')
+                    <hr class="my-3">
                 </p>
                 
                 <!-- Add your content components here -->
@@ -106,8 +121,8 @@
             <div class="flex gap-2 justify-end">
                 <i class="fa-solid fa-circle-info my-auto"></i>
                 <p class="pl-3 text-white">
-                    Dibuat oleh ASDOS RPL 2023.
-                    {{$date}}
+                    ASDOS RPL 2023.
+                    You accessed on {{$date}}
                 </p>
             </div>
         </div>

@@ -14,6 +14,9 @@ Route::middleware(['guest'])->group(function(){
 Route::middleware(['auth'])->group(function(){
     // peternak
     Route::get('/dashboard/peternak', [peternakController::class, 'dashboard'])->name('dashboard_peternak')->middleware('cekRole:peternak');
+    Route::get('/form/order/pakan', [peternakController::class, 'formOrderPakan'])->name('form_order_pakan')->middleware('cekRole:peternak');
+    Route::get('/data/peternak', [peternakController::class, 'dataPeternak'])->name('data_peternak')->middleware('cekRole:peternak');
+    Route::get('/stok/pakan', [peternakController::class, 'stokPakan'])->name('stok_pakan')->middleware('cekRole:peternak');
     
     // pabrik
     Route::get('/dashboard/pabrik', [pabrikController::class, 'dashboard'])->name('dashboard_pabrik')->middleware('cekRole:pabrik');
