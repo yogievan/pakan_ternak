@@ -73,8 +73,8 @@
                         </a>
                     </li>
                     <li class="mb-2">
-                        <a href="#/form/order/pakan" class="block p-2 rounded hover:bg-gray-400 hover:text-gray-800">
-                            <i class="fa fa-boxes-stacked mr-3"></i> Permintaan Pakan
+                        <a href="{{ route('data_peternak') }}" class="block p-2 rounded hover:bg-gray-400 hover:text-gray-800">
+                            <i class="fa fa-database mr-3"></i> Data Peternak
                         </a>
                     </li>
                     <!-- Add more navigation links as needed -->

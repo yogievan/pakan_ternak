@@ -1,4 +1,4 @@
-@extends('layouts.template_peternak')
+@extends('layouts.template_pabrik')
 @section('title', 'Data Peternak')
 @section('judul_konten','Data Peternak')
 @section('konten')

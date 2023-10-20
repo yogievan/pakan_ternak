@@ -10,4 +10,7 @@ class pabrikController extends Controller
     public function dashboard(){
         return view('pabrik.dashboard');
     }
+    public function dataPeternak(){
+        return view('pabrik.dataPeternak');
+    }
 }

@@ -36,7 +36,7 @@
         <div class="flex">
             <a href="{{ route('dashboard_peternak') }}">
                 <div class="flex gap-2">
-                    <img class="w-8 h-10 mr-2 my-auto" src="../assets/img/UKDW.png" alt="logo">
+                    <img class="w-8 h-10 mr-2 my-auto" src="../assets/img/UKDW.png" alt="UKDW">
                     <h1 class="text-2xl font-semibold my-auto">
                         Sistem Informasi Pakan Ternak
                     </h1>
@@ -50,7 +50,7 @@
             </p>
             <div class="mr-10">
                 <div class="w-[50px]">
-                    <img src="https://www.creative-tim.com/learning-lab/tailwind-starter-kit/img/team-2-800x800.jpg" alt="..." class="shadow rounded-full max-w-full h-auto align-middle border-none" />
+                    <img class="rounded-full" src="https://flowbite.com/application-ui/demo/images/users/neil-sims.png" />
                 </div>
             </div>
             <div class="my-auto">
@@ -73,16 +73,13 @@
                             <i class="fa fa-house mr-3"></i> Dashboard
                         </a>
                     </li>
+                    
                     <li class="mb-2">
-                        <a href="{{ route('form_order_pakan') }}" class="block p-2 rounded hover:bg-gray-400 hover:text-gray-800">
-                            <i class="fa fa-truck-ramp-box mr-3"></i> Form Order Pakan
+                        <a href="{{ route('order_pakan') }}" class="block p-2 rounded hover:bg-gray-400 hover:text-gray-800">
+                            <i class="fa fa-truck-ramp-box mr-3"></i> Order Pakan
                         </a>
                     </li>
-                    <li class="mb-2">
-                        <a href="{{ route('data_peternak') }}" class="block p-2 rounded hover:bg-gray-400 hover:text-gray-800">
-                            <i class="fa fa-database mr-3"></i> Data Peternak
-                        </a>
-                    </li>
+                    
                     <li class="mb-2">
                         <a href="{{ route('stok_pakan') }}" class="block p-2 rounded hover:bg-gray-400 hover:text-gray-800">
                             <i class="fa fa-boxes-stacked mr-3"></i> Stok Pakan
