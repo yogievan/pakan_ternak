@@ -16,14 +16,18 @@ class UserData extends Seeder
         $userData =[
             [
                 'name' =>'Peternak Handal',
-                'email' => 'peternak@gmail.com',
+                'email' => 'peternak_ayambebek@gmail.com',
                 'role' => 'peternak',
+                'alamat' => 'Jalan Menuju Kesuksesan',
+                'peternak' => '1',
                 'password' => bcrypt('123'),
             ],
             [
                 'name' =>'Pabrik Bang Jago',
                 'email' => 'pabrik@gmail.com',
                 'role' => 'pabrik',
+                'alamat' => 'Jalan Jalan Aja',
+                'peternak' => '',
                 'password' => bcrypt('123'),
             ],
         ];

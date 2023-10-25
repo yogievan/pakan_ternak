@@ -14,3 +14,8 @@
     width: 200px;
     height: 120px;
 }
+.back {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}

@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>
-            @yield('title')
+            Halaman Login Pakan Ternak
         </title>
         @vite('resources/css/app.css')
 
@@ -15,16 +15,16 @@
 
     </head>
     <body>
-        <section class="bg-gray-50 dark:bg-gray-900">
-            <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
-                <a href="#" class="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
+        <section class="bg-gray-900">
+            <div class="flex flex-col items-center justify-center h-screen">
+                <a href="#" class="flex items-center mb-6 text-2xl font-semibold text-white">
                     <img class="w-8 h-10 mr-2" src="../assets/img/UKDW.png" alt="logo">
                     Sistem Informasi Pakan Ternak    
                 </a>
-                <div class="w-full bg-white rounded-lg border dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
+                <div class="w-full rounded-lg border md:mt-0 sm:max-w-md xl:p-0 bg-gray-800 border-gray-700">
                     <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
-                        <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
-                            Sign in to your account
+                        <h1 class="text-xl font-bold leading-tight tracking-tight md:text-2xl text-white">
+                            Sign in to your account!
                         </h1>
                         {{-- alert start --}}
                         @if ($errors->any())
@@ -44,12 +44,12 @@
                         <form class="space-y-4 md:space-y-6" action="/" method="post">
                             @csrf
                             <div>
-                                <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
-                                <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-white outline-none" placeholder="name@company.com" required>
+                                <label for="email" class="block mb-2 text-sm font-medium text-white">Your email</label>
+                                <input type="email" name="email" id="email" class="border sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:border-white outline-none" placeholder="name@company.com" required>
                             </div>
                             <div>
-                                <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
-                                <input type="password" name="password" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-white outline-none" required>
+                                <label for="password" class="block mb-2 text-sm font-medium text-white">Password</label>
+                                <input type="password" name="password" id="password" placeholder="••••••••" class="border sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:border-white outline-none" required>
                             </div>
                             <div>
                                 <button type="submit" class="bg-blue-700 text-white font-normal text-center w-full rounded-lg p-3 hover:bg-blue-500">Sign In</button>
@@ -58,6 +58,25 @@
                     </div>
                 </div>
             </div>
+            @php
+                $date = date("l, d F Y");
+            @endphp
+            <footer class="border-t shadow-md dark:bg-gray-800 dark:border-gray-700 p-4 text-white">
+                <div class="flex justify-between">
+                    <div class="flex gap-2">
+                        <p class="pl-3 font-bold text-white">
+                            Sistem Informasi Pakan Ternak
+                        </p>
+                    </div>
+                    <div class="flex gap-2 justify-end">
+                        <i class="fa-solid fa-circle-info my-auto"></i>
+                        <p class="pl-3 text-white">
+                            ASDOS RPL 2023.
+                            You accessed on {{$date}}
+                        </p>
+                    </div>
+                </div>
+            </footer>
         </section>
     </body>
 </html>

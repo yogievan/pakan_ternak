@@ -7,7 +7,7 @@
     <title>
         @yield('title', 'Tanpa Judul')
     </title>
-    @vite('resources/css/app.css')
+    @vite(['resources/css/app.css','resources/js/app.js'])
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -30,9 +30,8 @@
 
 </head>
 <body class="font-sans bg-gray-100">
-
     <!-- Header -->
-    <header class="border-b shadow-md dark:bg-gray-800 dark:border-gray-700 p-4 text-white">
+    <header class="border-b shadow-md bg-gray-900 border-gray-700 p-4 text-white">
         <div class="flex">
             <a href="{{ route('dashboard_peternak') }}">
                 <div class="flex gap-2">
@@ -49,9 +48,11 @@
                 {{ $name }}
             </p>
             <div class="mr-10">
-                <div class="w-[50px]">
-                    <img class="rounded-full" src="https://flowbite.com/application-ui/demo/images/users/neil-sims.png" />
-                </div>
+                <a href="{{ route('profile') }}">
+                    <div class="w-[50px]">
+                        <img class="rounded-full" src="https://flowbite.com/application-ui/demo/images/users/neil-sims.png" />
+                    </div>
+                </a>
             </div>
             <div class="my-auto">
                 <a href="/logout">
@@ -65,7 +66,7 @@
 
     <div class="flex">
         <!-- Sidebar -->
-        <aside class="dark:bg-gray-800 dark:border-gray-700 text-white w-64 min-h-screen p-4 ">
+        <aside class="bg-gray-900 border-gray-700 text-white w-64 min-h-screen p-4 ">
             <nav>
                 <ul>
                     <li class="mb-2">
@@ -94,7 +95,7 @@
         <main class="flex p-4">
             <!-- Your content goes here -->
             <div class="py-3 pl-5 pr-5 font-bold text-gray-800">
-                <p class="text-[2em] font-bold my-auto mb-3">
+                <p class="text-[2em] font-extrabold my-auto mb-3">
                     @yield('judul_konten')
                     <hr class="my-3">
                 </p>
@@ -108,7 +109,7 @@
     @php
         $date = date("l, d F Y");
     @endphp
-    <footer class="border-t shadow-md dark:bg-gray-800 dark:border-gray-700 p-4 text-white">
+    <footer class="border-t shadow-md bg-gray-900 border-gray-700 p-4 text-white">
         <div class="flex justify-between">
             <div class="flex gap-2">
                 <p class="pl-3 font-bold text-white">
@@ -124,5 +125,7 @@
             </div>
         </div>
     </footer>
+    <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 </body>
 </html>

@@ -16,7 +16,10 @@ return new class extends Migration
             $table->string('nama_pakan');
             $table->integer('harga');
             $table->integer('berat_kg');
+            $table->foreignId('jenis_id');
             $table->timestamps();
+
+            $table->foreign('jenis_id')->references('id')->on('jenis')->onDelete('cascade');
         });
     }
 
