@@ -33,7 +33,7 @@
     <!-- Header -->
     <header class="border-b shadow-md bg-gray-900 border-gray-700 p-4 text-white">
         <div class="flex">
-            <a href="#/dashboard/pabrik">
+            <a href="{{ route('dashboard_pabrik') }}">
                 <div class="flex gap-2">
                     <img class="w-8 h-10 mr-2 my-auto" src="../assets/img/UKDW.png" alt="logo">
                     <h1 class="text-2xl font-semibold my-auto">
@@ -78,8 +78,8 @@
                         </a>
                     </li>
                     <li class="mb-2">
-                        <a href="#pakan" class="block p-2 rounded hover:bg-gray-400 hover:text-gray-800">
-                            <i class="fa fa-cart-plus mr-3"></i> Data Pakan
+                        <a href="{{ route('pakan_ternak') }}" class="block p-2 rounded hover:bg-gray-400 hover:text-gray-800">
+                            <i class="fa fa-cart-plus mr-3"></i> Data Pakan Ternak
                         </a>
                     </li>
                     <!-- Add more navigation links as needed -->

@@ -17,13 +17,16 @@ Route::middleware(['auth'])->group(function(){
     Route::get('/order/pakan', [peternakController::class, 'orderPakan'])->name('order_pakan')->middleware('cekRole:peternak');
     Route::get('/order/pakan-{id}', [peternakController::class, 'detailOrderPakan'])->name('detail_order')->middleware('cekRole:peternak');
     Route::get('/stok/pakan', [peternakController::class, 'stokPakan'])->name('stok_pakan')->middleware('cekRole:peternak');
-    
+
     // profile user peternak
     Route::get('/profile', [peternakController::class, 'profileUser'])->name('profile')->middleware('cekRole:peternak');
     
     // pabrik
     Route::get('/dashboard/pabrik', [pabrikController::class, 'dashboard'])->name('dashboard_pabrik')->middleware('cekRole:pabrik');
     Route::get('/data/peternak', [pabrikController::class, 'dataPeternak'])->name('data_peternak')->middleware('cekRole:pabrik');
+    Route::get('/pakan/ternak',[pabrikController::class, 'dataPakanTernak'])->name('pakan_ternak')->middleware('cekRole:pabrik');
+    Route::get('/pakan/ternak/tambah',[pabrikController::class, 'tambahDataPakanTernak'])->name('addPakan')->middleware('cekRole:pabrik');
+    Route::post('/pakan/ternak/tambah/data',[pabrikController::class, 'tambahPakan'])->name('add_DataP')->middleware('cekRole:pabrik');
 
     // Logout
     Route::get('/logout',[authController::class, 'logout']);
