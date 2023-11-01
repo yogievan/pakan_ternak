@@ -25,6 +25,11 @@ class peternakController extends Controller
     public function stokPakan(){
         return view('peternak.stokPakan');
     }
+
+    public function coba(){
+        return view('coba_aja');
+    }
+
     // open profile
     public function profileUser(){
         $name = Auth::user()->name;
