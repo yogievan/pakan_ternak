@@ -1,3 +1,6 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
-
 <p><b>Aplikasi ini masih tahap develop</b></p>
+<p><b>Fitur yang ada disini (already done):</b></p>
+<li>Fitur Multi User Auth</li>
+<li>Fitur Pervert back after logout</li>
+<li>Fitur get data table form database</li>
+<li>Fitur order (not create invoice just select the list order)</li>
