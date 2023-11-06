@@ -5,6 +5,9 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\User;
+use Illuminate\Support\Facades\DB;
+
+use function Laravel\Prompts\table;
 
 class UserData extends Seeder
 {
@@ -31,8 +34,11 @@ class UserData extends Seeder
                 'password' => bcrypt('123'),
             ],
         ];
-        foreach($userData as $key => $val){
-            User::create($val);
+        // foreach($userData as $key => $val){
+        //     User::create($val);
+        // }
+        foreach($userData as $val){
+            DB::table('users')->insert($val);
         }
     }
 }
